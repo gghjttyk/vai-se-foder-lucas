@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Kãkãkã</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alert-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .alert-box button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .alert-box button:nth-child(2) {
+            background-color: green;
+            color: white;
+        }
+
+        .alert-box button:nth-child(1) {
+            background-color: grey;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box">
+        <p>Deseja entrar nesse site mesmo safadinho?</p>
+        <button onclick="this.style.display='none'">Não</button>
+        <button onclick="window.location.href='lucas_final.html'">Claro rsrs</button>
+    </div>
+</body>
+</html>

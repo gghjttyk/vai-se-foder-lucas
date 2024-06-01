@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn.discordapp.com/attachments/692516598359130227/1246270041679331348/Screenshot_20240531_220241_WhatsApp.jpg?ex=665bc6ec&is=665a756c&hm=589ebea444368ea090dfe5aedc554df3790c7be5e50d1dcf2b1e14cba14f9b7f&');
+            background-size: cover;
+            background-position: center;
+            animation: rotate 20s infinite linear;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .container {
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: background-color 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.75);
+        }
+
+        button::before, button::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            bottom: -2px;
+            left: -2px;
+            right: -2px;
+            background: rgba(255, 0, 0, 0.5);
+            z-index: -1;
+            transform: skewX(-10deg);
+            transition: all 0.3s;
+        }
+
+        button::after {
+            transform: skewX(10deg);
+            z-index: -2;
+            filter: blur(10px);
+        }
+
+        button:hover::before {
+            transform: skewX(10deg);
+        }
+
+        button:hover::after {
+            transform: skewX(-10deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="button-container">
+            <button onclick="window.location.href='eveli.html'">Eveli Capetinha</button>
+            <button onclick="window.location.href='valpir.html'">Valpir o Rei da Trombada</button>
+            <button onclick="window.location.href='lucas.html'">Lucas Kãkãkã</button>
+            <button onclick="window.location.href='carla.html'">Carla Tipo Carla Tipo Carla</button>
+        </div>
+    </div>
+</body>
+</html>
